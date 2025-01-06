@@ -1,3 +1,8 @@
+:root {
+  --cor-texto: rgb(15, 20, 25);
+  --selecionado: rgba(15, 25, 20, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,3 +16,83 @@ img {
 
 /*---------------------------------------------------------*/
 
+.navegacao li {
+  border-radius: 10px;
+  margin: 12px;
+
+  &:hover {
+    background-color: var(--selecionado);
+  }
+
+  a {
+    color: var(--cor-texto);
+  }
+}
+
+.profile {
+  h1 {
+    color: var(--cor-texto);
+  }
+  h3 {
+    color: rgb(83, 100, 113);
+  }
+  p {
+    color: rgb(15, 20, 25);
+  }
+}
+
+.profile-dados {
+  color: rgb(83, 100, 113);
+}
+
+.estatisticas a {
+  color: var(--cor-texto);
+
+  & + a {
+    margin-left: 10px;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+
+  li {
+    margin: 12px;
+  }
+
+  a {
+    color: var(--cor-texto);
+    border-radius: 10px;
+    padding: 8px;
+  }
+
+  .blue:hover {
+    background: rgba(29, 155, 240, 0.1);
+    color: rgba(29, 155, 240, 1);
+  }
+  .green:hover {
+    background-color: rgba(0, 186, 124, 0.1);
+    color: rgba(0, 186, 124, 1);
+  }
+  .red:hover {
+    background-color: rgba(249, 24, 128, 0.1);
+    color: rgba(249, 24, 128, 1);
+  }
+}
+
+article {
+  margin-top: 32px;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+}
