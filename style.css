@@ -14,17 +14,57 @@ img {
   max-width: 100%;
 }
 
+body {
+  display: grid;
+  grid-template-columns: 240px 1fr 240px;
+  align-items: start;
+  grid-template-areas: 
+    "nav-bar profile right-bar"
+		"nav-bar postagens right-bar"
+  ;
+
+  .nav-bar {
+    grid-area: nav-bar;
+  }
+
+  .profile {
+    grid-area: profile;
+  }
+
+  .postagens {
+    grid-area: postagens;
+  }
+
+  .right-bar {
+    grid-area: right-bar;
+  }
+}
+
 /*---------------------------------------------------------*/
+.nav-bar {
+  button {
+    background-color: rgb(64, 122, 247);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 8px 20px;
+  }
+}
 
 .navegacao li {
   border-radius: 10px;
-  margin: 12px;
+  margin: 8px;
+  max-width: 140px;
+  padding: 8px 10px;
 
   &:hover {
     background-color: var(--selecionado);
   }
 
   a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     color: var(--cor-texto);
   }
 }
@@ -96,3 +136,4 @@ article {
     background-color: rgba(0, 0, 0, 0.03);
   }
 }
+
