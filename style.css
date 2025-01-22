@@ -16,7 +16,7 @@ img {
 
 body {
   display: grid;
-  grid-template-columns: 240px 1fr 240px;
+  grid-template-columns: 260px 1fr 260px;
   align-items: start;
   grid-template-areas: 
     "nav-bar profile right-bar"
@@ -42,20 +42,30 @@ body {
 
 /*---------------------------------------------------------*/
 .nav-bar {
+  padding: 20px;
+
   button {
+    font-size: 1rem;
     background-color: rgb(64, 122, 247);
     border: none;
     color: white;
-    border-radius: 10px;
-    padding: 8px 20px;
+    border-radius: 20px;
+    padding: 12px 64px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(49, 104, 223);
+    }
   }
 }
 
 .navegacao li {
   border-radius: 10px;
   margin: 8px;
+  margin-left: 0;
   max-width: 140px;
   padding: 8px 10px;
+  padding-left: 0;
 
   &:hover {
     background-color: var(--selecionado);
@@ -129,11 +139,56 @@ body {
   }
 }
 
-article {
-  margin-top: 32px;
+.postagens {
+  .nav-postagens {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.4rem;
+  }
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+  article {
+    border-top: 2px solid rgba(0, 0, 0, 0.15);
+  
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.03);
+    }
   }
 }
 
+.right-bar {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    background-color: rgb(239, 243, 244);
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 16px;
+    padding: 12px 18px;
+  }
+
+  .sugestoes-amigos {
+    background-color: rgb(239, 243, 244);
+    padding: 12px;
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 18px;
+    }
+
+    .sugestao-amigo {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 18px;
+
+      button {
+        background-color: rgb(64, 122, 247);
+        border: none;
+        color: white;
+        border-radius: 4px;
+        padding: 8px 20px;
+      }
+    }
+  }
+}
