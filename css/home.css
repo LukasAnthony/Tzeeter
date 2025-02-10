@@ -101,7 +101,8 @@ body {
 
     input {
       /* border: none; */
-      height: 128px;
+      height: 110px;
+      padding: 10px;
     }
 
     a {
